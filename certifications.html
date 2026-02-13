@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications</title>
+
+<link rel="icon" type="image/png" href="Assets/logoIcon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header id="mainHeader">
+    <div class="logo"><b>Welcome! I am glad you are here..</b></div>
+
+    <div class="right-area">
+        <nav class="nav-links">
+            <a href="index.html" class="nav-box"><b>Resume</b></a>
+             <a href="#" class="nav-box"><b>Projects</b></a>
+            <a href="#" class="nav-box"><b>Professional Thoughts</b></a>
+            <a href="#" class="nav-box"><b>Professional Events</b></a>
+            <a href="#" class="nav-box"><b>Memories</b></a>
+        </nav>
+
+        <div class="lamp" onclick="toggleMode()">
+            <img id="lampIcon" src="lamp-light.png">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="cert-header">
+    <h2>Certifications</h2>
+    <input type="text" id="certSearch" placeholder="Search certificates...">
+</div>
+    <br>
+    <div class="cert-grid">
+
+<a href="https://learn.microsoft.com/api/credentials/share/en-in/kushagrasingh/AA1AB93767F5992D?sharingId=58F2D628D9B776CB" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <h3>Microsoft Certified Power Platform Fundamentals (PL-900) </h3>
+    <p>Fall 2023</p>
+</a>
+<a href="https://learn.microsoft.com/api/credentials/share/en-in/kushagrasingh/75F410B4E637C8FE?sharingId=58F2D628D9B776CB" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <h3>Microsoft Certified Azure Fundamentals (AZ-900)</h3>
+    <p>Early 2025</p>
+</a>
+</a>
+<a href="https://www.coursera.org/account/accomplishments/verify/4Q4BM7YZF49M?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <h3>Introduction to Python</h3>
+    <p>Mid 2020</p>
+</a>
+
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Your Name. All rights reserved.
+</footer>
+
+<script src="script.js">
+</script>
+<script>
+document.getElementById("certSearch").addEventListener("input", function () {
+    const value = this.value.toLowerCase().trim();
+    const cards = document.querySelectorAll(".cert-card");
+
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

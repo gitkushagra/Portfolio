@@ -1,0 +1,354 @@
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --nav-bg: #f5f5f5;
+    --accent: #0077ff;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #f5f5f5;
+    --nav-bg: #1f1f1f;
+    --accent: #4da3ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.right-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Lamp sizing */
+.lamp img {
+    width: 26px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .right-area {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+
+/* TOGGLE BUTTON */
+.toggle-btn {
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+    border-radius: 5px;
+}
+
+/* MAIN CONTENT */
+.container {
+    margin: auto;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* SLIDER SWITCH */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked + .slider {
+    background-color: #0077ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.lamp {
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+}
+
+/* Light mode look */
+body:not(.dark) .lamp {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* Dark mode look (lamp appears "on") */
+body.dark .lamp {
+    filter: drop-shadow(0 0 6px #ffd54f);
+    opacity: 1;
+}
+
+.lamp img {
+    width: 26px;
+    height: auto;
+    cursor: pointer;
+}
+.nav-box {
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: var(--nav-bg);
+    border: 1px solid rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+/* Dark mode border adjustment */
+body.dark .nav-box {
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Hover "jingle" animation */
+.nav-box:hover {
+    animation: jingle 0.35s ease;
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Keyframes for jingle shake */
+@keyframes jingle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+/*  RESUME SECTION */
+.resume-container {
+    width: 100%;
+    height: 85vh;
+    margin-top: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.resume-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Download button */
+.resume-download {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 18px;
+    text-align: center;
+    background: var(--nav-bg);
+    font-size: 14px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+body.dark footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+/* RESUME IMAGES */
+.resume-pages {
+    max-width: 900px;
+    margin: auto;
+}
+
+.resume-pages img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* PAGE CONTENT */
+.container {
+    padding: 110px 20px 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* CERTIFICATION GRID */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* 3D CARD */
+.cert-card {
+    background: var(--nav-bg);
+    padding: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+    transform: perspective(600px) rotateX(2deg);
+    transition: 0.2s ease;
+}
+
+/* Jiggle on hover */
+.cert-card:hover {
+    animation: jiggle 0.35s ease;
+    transform: translateY(-6px) perspective(600px) rotateX(0deg);
+}
+
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.cert-card h3 {
+    margin-top: 0;
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#certSearch {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    width: 220px;
+}
+
+body.dark #certSearch {
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Mobile behavior */
+@media (max-width: 600px) {
+    .cert-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #certSearch {
+        width: 100%;
+    }
+}
+
