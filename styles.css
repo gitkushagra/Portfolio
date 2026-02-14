@@ -27,28 +27,33 @@ body {
 
 /* HEADER */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--nav-bg);
-    padding: 12px 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 12px 24px;
+    background: var(--nav-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
 }
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;   /* pushes links to right */
+}
+
+.lamp {
+    margin-left: 15px;
+}
+
+
+
 
 .right-area {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 /* Lamp sizing */
@@ -60,22 +65,40 @@ header {
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
+
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .right-area {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .nav-links {
         flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    /* Links become vertical + LEFT aligned */
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0;        /* remove right push */
+        align-items: flex-start;
+        margin-top: 10px;
         gap: 8px;
     }
+
+    /* Keep lamp at top-right */
+    .lamp {
+        margin-left: auto;
+        order: 2;
+    }
+
+    /* Logo stays top-left */
+    .logo {
+        order: 1;
+    }
+
+    /* Links appear below them */
+    .nav-links {
+        order: 3;
+    }
 }
+
+
 
 
 /* TOGGLE BUTTON */
@@ -94,16 +117,16 @@ header {
 }
 
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-    nav {
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+/* Hide burger on desktop */
+.burger {
+    display: none;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
 }
+
 
 /* SLIDER SWITCH */
 .switch {
@@ -149,13 +172,6 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(22px);
-}
-
-.lamp {
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.3s;
-    user-select: none;
 }
 
 /* Light mode look */

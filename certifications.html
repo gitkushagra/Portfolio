@@ -97,20 +97,21 @@ body.dark #certSearch {
 
 <body>
 <header id="mainHeader">
-    <div class="logo"><b>elcome! I am glad you are here.</b></div>
+    <div class="logo"><b>Welcome! I am glad you are here.</b></div>
 
-    <div class="right-area">
-        <nav class="nav-links">
+     <nav class="nav-links">
             <a href="index.html" class="nav-box"><b>Resume</b></a>
              <a href="projects.html" class="nav-box"><b>Projects</b></a>
             <a href="Memories.html" class="nav-box"><b>Memories</b></a>
         </nav>
 
-        <div class="lamp" onclick="toggleMode()">
-            <img id="lampIcon" src="lamp-light.png">
-        </div>
+    <div class="lamp" onclick="toggleMode()">
+        <img id="lampIcon" src="Assets/lamp-light.png" alt="lamp">
     </div>
 </header>
+
+
+
 
 <div class="container">
 
@@ -920,16 +921,6 @@ document.getElementById("certSearch").addEventListener("input", function () {
         }
     });
 });
-
-function adjustTopSpacing() {
-    const header = document.getElementById("mainHeader");
-    const container = document.querySelector(".container");
-    const height = header.offsetHeight;
-    container.style.marginTop = height + "px";
-}
-
-window.addEventListener("load", adjustTopSpacing);
-window.addEventListener("resize", adjustTopSpacing);
 </script>
 
 </body>
