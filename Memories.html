@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="Assets/logoIcon.png">
+<title>Memories</title>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===== VIDEO GRID ===== */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* ===== VIDEO CARD ===== */
+.video-card {
+    background: var(--nav-bg);
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+    transform: perspective(600px) rotateX(2deg);
+    transition: 0.2s ease;
+}
+
+.video-card:hover {
+    animation: jiggle 0.35s ease;
+    transform: translateY(-6px) perspective(600px) rotateX(0deg);
+}
+
+/* Jiggle animation */
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* ===== RESPONSIVE VIDEO ===== */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-card h3 {
+    margin: 12px 0 5px;
+    font-size: 16px;
+}
+
+.video-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: var(--nav-bg);
+    margin-top: 40px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header id="mainHeader">
+    <div class="logo"><b>Welcome! I am glad you are here.</b></div>
+
+     <nav class="nav-links">
+            <a href="index.html" class="nav-box"><b>Resume</b></a>
+            <a href="certifications.html" class="nav-box"><b>Certifications</b></a>
+            <a href="projects.html" class="nav-box"><b>Projects</b></a>
+            </nav>
+
+    <div class="lamp" onclick="toggleMode()">
+        <img id="lampIcon" src="Assets/lamp-light.png" alt="lamp">
+    </div>
+</header>
+
+<div class="container">
+    <h2>Memories ✌🏻</h2>
+    <br>
+    <div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/oi6NEdKleKI"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (A)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dbFeLBOXb8E"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (B)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/kj13ya90FP4"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (C)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+         <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/gSHjRrKwf18"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (D)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+         <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/cdvlLdxjm4g"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (E)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Tq20XgiIcNY"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (F)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/iHkkcL3J4vM"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (G)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+         <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Z_bHDGLvwcc"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (H)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/0Dnu4g0Mnv4"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (I)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/MLfVVWy_8e8"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (J)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/MYmhZsQxBzI"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (K)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/fJVGQjPHWdk"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (L)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/mESSNdDp4lU"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (M)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Bhx23xyYtI0"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (N)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Xuf1dUoz4f4"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>2019 GCET Freshers (O)</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+         <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/GpfevTF240Y"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>Memory A</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+         <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/lLwu_Ma_t0U"
+                        allowfullscreen></iframe>
+            </div>
+            <h3>Memory B</h3>
+            <p>Uploaded on  22 May 2021</p>
+        </div>
+
+
+    </div>
+</div>
+
+<footer>
+     © 2026 Kushagra. All rights reserved.
+</footer>
+<script src="script.js">
+</script>
+
+
+</body>
+</html>

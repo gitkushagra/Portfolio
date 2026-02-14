@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications</title>
+
+<link rel="icon" type="image/png" href="Assets/logoIcon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+    .cert-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.cert-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+}
+/* CERTIFICATION GRID */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* 3D CARD */
+.cert-card {
+    background: var(--nav-bg);
+    padding: 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: 0 6px 0 rgba(0,0,0,0.15);
+    transform: perspective(600px) rotateX(2deg);
+    transition: 0.2s ease;
+}
+
+/* Jiggle on hover */
+.cert-card:hover {
+    animation: jiggle 0.35s ease;
+    transform: translateY(-6px) perspective(600px) rotateX(0deg);
+}
+
+@keyframes jiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.cert-card h3 {
+    margin-top: 0;
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#certSearch {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    width: 220px;
+}
+
+body.dark #certSearch {
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Mobile behavior */
+@media (max-width: 600px) {
+    .cert-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #certSearch {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+<header id="mainHeader">
+    <div class="logo"><b>Welcome! I am glad you are here.</b></div>
+
+     <nav class="nav-links">
+            <a href="index.html" class="nav-box"><b>Resume</b></a>
+             <a href="projects.html" class="nav-box"><b>Projects</b></a>
+            <a href="Memories.html" class="nav-box"><b>Memories</b></a>
+        </nav>
+
+    <div class="lamp" onclick="toggleMode()">
+        <img id="lampIcon" src="Assets/lamp-light.png" alt="lamp">
+    </div>
+</header>
+
+
+
+
+<div class="container">
+
+    <div class="cert-header">
+    <h2>🎗️ Certifications 🎗️</h2>
+    <input type="text" id="certSearch" placeholder="Search Certificate...">
+</div>
+    <br>
+    <div class="cert-grid">
+
+<a href="https://learn.microsoft.com/api/credentials/share/en-in/kushagrasingh/AA1AB93767F5992D?sharingId=58F2D628D9B776CB" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Microsoft.png"
+             alt="icon">
+        <h3>Microsoft Certified Power Platform Fundamentals (PL-900)</h3>
+    </div>
+    <p>Fall 2023</p>
+</a>
+<a href="https://learn.microsoft.com/api/credentials/share/en-in/kushagrasingh/75F410B4E637C8FE?sharingId=58F2D628D9B776CB" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Microsoft.png"
+             alt="icon">
+        <h3>Microsoft Certified Azure Fundamentals (AZ-900)</h3>
+    </div>
+    <p>Early 2025</p>
+</a>
+</a>
+<a href="https://www.coursera.org/account/accomplishments/verify/4Q4BM7YZF49M?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+        <h3>Introduction to Python</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://www.credly.com/badges/58cddb27-a09f-4bf5-ad0f-c56d71651279/public_url" target="_blank" rel="noopener noreferrer" class="cert-card">
+     <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Credly.png"
+             alt="icon">
+       <h3>Google IT Automation with Python</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://www.icloud.com/iclouddrive/0027kbacJIC-8rf7NptCYWLIQ#CCMF" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coforge.png"
+             alt="icon">
+       <h3>CCMF-ESSENTIALS INSURANCE</h3>
+    </div>
+    <p>Fall 2024</p>
+</a>
+
+
+<a href="https://smartinternz.com/internships/salesforce_certificates/bf5d232e6c54a84b97769a91adb1642f" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/SmartBridge.png"
+             alt="icon">
+      <h3>Salesforce Developer Virtual Internship</h3>
+    </div>
+    
+    <p>Mid 2022</p>
+</a>
+
+<a href="https://skillsoft.digitalbadges.skillsoft.com/da9f1cc0-8914-421c-9857-f1abf371d67f#gs.6kwvdf" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Skillsoft.png"
+             alt="icon">
+        <h3>Developing a Mindset of Growth and Learning</h3>
+    </div>
+    <p>Early 2024</p>
+</a>
+
+<a href="https://skillsoft.digitalbadges.skillsoft.com/ae2999ca-e381-43ae-a970-6afb6bfd6a8d#gs.6k3cth" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Skillsoft.png"
+             alt="icon">
+          <h3>Overcoming Your Own Unconscious Biases</h3>
+    </div>
+    <p>Early 2024</p>
+</a>
+
+<a href="https://skillsoft.digitalbadges.skillsoft.com/a84875a9-48b0-4e6f-9b02-4d4205bce356#gs.6k48rk" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Skillsoft.png"
+             alt="icon">
+         <h3>Managing and Supporting Employee Wellness</h3>
+    </div>
+    <p>Fall 2023</p>
+</a>
+
+<a href="https://skillsoft.digitalbadges.skillsoft.com/4f60e6e5-e1d3-4f5f-a6cd-0ea4cb9fc684" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Skillsoft.png"
+             alt="icon">
+         <h3>Optimizing Your Workplace Wellbeing</h3>
+    </div>
+    <p>Fall 2023</p>
+</a>
+
+<a href="https://skillsoft.digitalbadges.skillsoft.com/7efbf6d4-4400-49ea-899c-59c0405f2cac" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Skillsoft.png"
+             alt="icon">
+          <h3>Learning from Failure and Success</h3>
+    </div>
+    <p>Fall 2023</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/specialization/9F3JN99EBZDA?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+          <h3>Data analytics specialization </h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/UNVBXZS9J2MP" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Foundations of Project Management</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/KAMYLZSBH2DA" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Google Data Analytics Capstone: Complete a Case Study</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/QX5M9RFER2F2" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Data Analysis with R Programming</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/D6NMJR92MZV5" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Share Data Through the Art of Visualization</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/MFPTRY9Q4DDP" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Analyze Data to Answer Questions</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/9BDVV78XYX74" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Process Data from Dirty to Clean</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/S8W9FHZUYN84" target="_blank" rel="noopener noreferrer" class="cert-card">
+     <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Prepare Data for Exploration</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/HAT5CU84JM8F" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Ask Questions to Make Data-Driven Decisions</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/PZSDB66VJ75G" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Foundations: Data, Data, Everywhere</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/GUFAHR6XCGWP" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Foundations of User Experience (UX) Design</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.icloud.com/iclouddrive/08djh_qTgQPRHi4URKmrINJYA#Wipro%5FTalentNext%5FKushagra_Singh" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Wipro.png"
+             alt="icon">
+           <h3>Wipro TalentNext Java Phase 1 and Phase 2</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.linkedin.com/learning/certificates/b4aad89c1869f5def5ff863287457b94aaaf22f26787f408b47ac81ffb4a76bc" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/LinkedIn.png"
+             alt="icon">
+           <h3>Financial Record Keeping</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.linkedin.com/learning/certificates/c21f7934df0a6063e4625dafb181e7935e5d2dbd407131198e55684773500018" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/LinkedIn.png"
+             alt="icon">
+           <h3>Java: Data Structures</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://www.linkedin.com/learning/certificates/71370cc05c25db457b0f4a170f7a46354834e4ba8b40bef7e7ccd8d8839edb7a" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/LinkedIn.png"
+             alt="icon">
+           <h3>Object-Oriented Programming with Java</h3>
+    </div>
+    <p>Fall 2022</p>
+</a>
+
+<a href="https://coursera.org/share/ccd85cae34c16e4f8d3016fe800557ae" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Deep Learning Specialization</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/5b487694c147b9d52064cb24a5e4f228" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Preparing for Google Cloud Certification: Cloud Network Engineer Specialization</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/61c694f70e51d1ed114d8cfb8c82b1df" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Technical Support Fundamentals</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/44e1ac9ebed3a6dde12947d945855306" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3> Write Professional Emails in English</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/252f3f75e2ff8381783f5b526666dee8" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Build Your Professional ePortfolio in English</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/f3ec75bad92cffa90e38886e7b0a67fb" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>AWS Fundamentals: Addressing Security Risk</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/0206e5d6b444bb675ebe46401b53997c" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>The Bits and Bytes of Computer Networking</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/6cd0a2ffd681eb5da1d495130dabd7d7" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Operating Systems and You: Becoming a Power User</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/8ea5b8e88359a83be1d1be3b0086d77e" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>AWS Fundamentals: Going Cloud-Native</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/0e6b7f3913cbb43d041c228edf51d446" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Fundamentals of Scalable Data Science</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/9b2a13ad08206397a5b05f66bbdc5d63" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Introduction to Cybersecurity Tools & Cyber Attacks</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/d01db03c7937d22157f402478cf6ec62" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Cybersecurity Roles, Processes & Operating System Security</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/ec51dc8863af6296dbce1334a3663b62" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Speak English Professionally: In Person, Online & On the Phone</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/f916a062bd6249801f823adee299fa84" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>AWS Fundamentals: Building Serverless Applications</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/0136deb327176c930384c0bd40099e5b" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Crash Course on Python</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/4f349dcf2299fc8afdaf61a157074e1c" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Using Python to Interact with the Operating System</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/e2751f5770937f32875e0148523295ce" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Functions, Methods, and Interfaces in Go</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://www.coursera.org/account/accomplishments/verify/J32XWJLMA67H?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Mathematical Thinking in Computer Science</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/93564d2c07683155fa9e2b95170fc532" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>System Administration and IT Infrastructure Services</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+
+<a href="https://coursera.org/share/d7bd14d437d8aa333a2c9e1009f13dfa" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>AWS Fundamentals: Migrating to the Cloud</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/ed82eec664dad7c5e49be9d9f5605581" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Getting Started with Go</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/bc0b6c8b5e143ffadfd01b31a4c855d3" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>IT Security: Defense against the digital dark arts</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/a3ac134309ffa03af784bfac4c99f11d" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Number Theory and Cryptography</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/5e3b406c8a2f69320674027c11e4eb8c" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Delivery Problem</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/756b68d22db943eeb07da590f9c63d61" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Automating Real-World Tasks with Python</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/5f6a2d221ec809708557abf8775e66f0" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Introduction to Graph Theory</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/6b10543728aaa65057018e02bf1c8375" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Take Your English Communication Skills to the Next Level</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/79ad496e66d66d7f6241a692ac179f64" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Configuration Management and the Cloud</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/03e0b14d01607c75c6fbe2af405e088f" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Combinatorics and Probability</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/f5174ee80b4413c01b3401f1e711d9fe" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Introduction to Git and GitHub</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/eebe921920c817de49bcb8b84df5231d" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Troubleshooting and Debugging Techniques</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/c8e1b7b90b166afb4b792f05e9dee8cb" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Concurrency in Go</h3>
+    </div>
+    <p>Mid 2020</p>
+</a>
+
+<a href="https://coursera.org/share/bfedd869464a018bd8386cbe6b29a712" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Preparing for Your Associate Cloud Engineer Journey</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/5250c37430516606287b3d524c0fd73d" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3> Essential Google Cloud Infrastructure: Core Services</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/924985d13fdbb730255f43e4e64fc9ff" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Elastic Google Cloud Infrastructure: Scaling and Automation</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/b5f37af61f105c44e9937e65102f1f19" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Mitigating Security Vulnerabilities on Google Cloud</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/b8e6f07000d13c67fffc911fb55e613d" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Doing more with Google Sheets</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/fbb9da99bd0f9183b0fa22f9e5a0be3b" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3> Managing Security in Google Cloud</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/cf807a153ddbd9cc7ec2dcb3ab23ede8" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Essential Google Cloud Infrastructure: Foundation</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/2a99ec47b1bbd0ab4a96b0bdd5477bbc" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Google Cloud Fundamentals: Core Infrastructure</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/1104057747eb8fa3b032a05462456fe5" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Architecting with Google Kubernetes Engine: Foundations</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/bdb040fce63bf49bf4ba342f3d633e1a" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3> Architecting with Google Kubernetes Engine: Workloads</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/9bce715c06514afe046538fd9655d4ce" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Structuring Machine Learning Projects</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/e493dde5cc68b4eefcaa89f4de4e9581" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Security Best Practices in Google Cloud</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/5fba26ee3a854184a29614abb931e367" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Preparing for the Google Cloud Professional Cloud Architect Exam</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/f7a237aa01441b5b81f3f63851d3aebe" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Fundamentals of Parallelism on Intel Architecture</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/a6bc78cdda93d7c22d40dfbb3c40ab70" target="_blank" rel="noopener noreferrer" class="cert-card">
+    
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Neural Networks and Deep Learning</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+<a href="https://coursera.org/share/342d1eb3fb36411a445a0a44bd876b73" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3>Reliable Google Cloud Infrastructure: Design and Process</h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+
+
+
+<!--
+
+<a href="" target="_blank" rel="noopener noreferrer" class="cert-card">
+    <div class="cert-title">
+        <img class="cert-icon"
+             src="Assets/Favicon Icons/Coursera.png"
+             alt="icon">
+           <h3></h3>
+    </div>
+    <p>Fall 2020</p>
+</a>
+
+-->
+    </div>
+
+</div>
+
+<footer>
+     © 2026 Kushagra. All rights reserved.
+</footer>
+
+<script src="script.js">
+</script>
+<script>
+document.getElementById("certSearch").addEventListener("input", function () {
+    const value = this.value.toLowerCase().trim();
+    const cards = document.querySelectorAll(".cert-card");
+
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+
+        if (text.includes(value)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
